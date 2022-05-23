@@ -49,42 +49,6 @@ namespace Koutei_task_Manager.WebFront {
         protected global::System.Web.UI.WebControls.LinkButton LBT_logout;
         
         /// <summary>
-        /// updLabelSave コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updLabelSave;
-        
-        /// <summary>
-        /// divLabelSave コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divLabelSave;
-        
-        /// <summary>
-        /// LB_Save コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LB_Save;
-        
-        /// <summary>
-        /// BT_LBSaveCross コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BT_LBSaveCross;
-        
-        /// <summary>
         /// btn_SaishinJyouhou コントロール。
         /// </summary>
         /// <remarks>

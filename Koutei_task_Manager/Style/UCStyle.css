@@ -160,13 +160,15 @@
     font-size: 12px !important;
     color: #AAAAAA;
     font-family: 'Inter-Regular';
-    font-style: normal;    line-height: 15px;
+    font-family: Inter;
+    font-style: normal;
+    /*line-height: 15px;*/
 }
 
 .UC02Lbl {
     font-size: 14px !important;
     font-family: 'Inter-Regular';
-    font-family: Inter;    font-style: normal;    line-height: 16.94px;
+    font-family: Inter;    font-style: normal;    /*line-height: 16.94px;*/
     color: #000000;
 }
 @font-face {
