@@ -297,14 +297,15 @@ input[type="radio"] + label {
 
 .WhiteBackgroundButton1 {
     line-height: 30px;
-    color: black;
+    color: #AAAAAA;
     text-align: center;
     font-size: 13px;
-    border: none;
-    background-color: transparent;
-    width:14px;
-    height:14px;
-    border-radius:50%;
+    background-color: white;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: #AAAAAA;
 }
 
     .WhiteBackgroundButton1:hover {
