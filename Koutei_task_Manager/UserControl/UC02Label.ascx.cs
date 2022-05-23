@@ -22,11 +22,11 @@ namespace Koutei_task_Manager.UserControl
             lblKouteiName.Text = drFusen["sBUNRUI"].ToString();　　//工程名           
             lbcSHIJISYO.Text = drFusen["cSHIJISYO"].ToString();　　//指示書コード
             string sshijisyo= drFusen["sSHIJISYO"].ToString();
-            lblsSHIJISYO.Text = sshijisyo.Replace("\n", "").Replace("\r", "").Replace("\r\n", "");　　//指示書名
+            lblsSHIJISYO.Text = sshijisyo.Trim().Replace("\r\n", "CRLFu000Du000A").Replace("\r", "").Replace("\n", "").Replace("CRLFu000Du000A", "\r\n");　　//指示書名
             lblSHIJISYO_Hyouji.Text = "#" + drFusen["cSHIJISYO"].ToString();　　//指示書コード表示
             lblLabelOrder.Text = drFusen["nJUMBAN"].ToString();　　//指示書分類順番
             string stokuisaki = drFusen["sTOKUISAKI"].ToString();
-            lblsTokuisaki.Text =stokuisaki.Replace("\n","").Replace("\r", "").Replace("\r\n", "");　　//得意先名
+            lblsTokuisaki.Text =stokuisaki.Trim().Replace("\r\n", "CRLFu000Du000A").Replace("\r", "").Replace("\n", "").Replace("CRLFu000Du000A", "\r\n");　　//得意先名
             lbldkanryouyotei.Text = drFusen["dKANRYOUYOTEI"].ToString();　　//指示書完了予定日
             lbleigyou.Text = drFusen["sTANTOUSHA"].ToString(); //営業担当者
             lblmail.Text = drFusen["SMAIL"].ToString(); //営業担当メール
