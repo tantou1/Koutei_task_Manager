@@ -103,6 +103,15 @@ namespace Koutei_task_Manager.UserControl {
         protected global::System.Web.UI.WebControls.Label lblmail;
         
         /// <summary>
+        /// div_img コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_img;
+        
+        /// <summary>
         /// Image コントロール。
         /// </summary>
         /// <remarks>
