@@ -22,23 +22,28 @@
                 <asp:Label ID="lbldkanryouyotei" runat="server" CssClass="UC02Lbl" />
             </div>
         </div>
-        <asp:Label ID="lblsSHIJISYO" runat="server" CssClass="UC02Lbl UC02Label" /><br />
+        <div class="row">
+        <asp:Label ID="lblsSHIJISYO" runat="server" CssClass="UC02Lbl UC02Label" />
+
+        </div>
+        <div class="row">
         <asp:Label ID="lblsTokuisaki" runat="server" CssClass="UC02Lbl UC02Label" />
+
+        </div>
         <asp:Label ID="lblKouteiId" runat="server" CssClass="DisplayNone"/>
         <asp:Label ID="lblKouteiName" runat="server" CssClass="DisplayNone"/>
         <asp:Label ID="lblLabelOrder" runat="server" CssClass="DisplayNone"/> 
         <asp:Label ID="lbcSHIJISYO" runat="server" CssClass="DisplayNone" />
         <asp:Label ID="lblmail" runat="server" CssClass="DisplayNone" />
     </div>
-    <div class="text-center">
-            <asp:Image ID="Image" runat="server" Width="100" Height="100" class="rounded" />    
-    </div>
-    <div class="UC01DivHeight">        
-        <div style="float: right;margin-top:6px;">
+    <div id="div_img" class="text-center" runat="server">
+            <asp:Image ID="Image" runat="server" Height="79" class="rounded" CssClass="mb-1" />    
+    </div>       
+        <div style="float: right;">
              <asp:Label ID="lbleigyou" runat="server" CssClass="UC02AnkenIdLbl" />
             <asp:Button ID="bt_end" runat="server" Text="" CssClass="WhiteBackgroundButton1" OnClick="Button1_Click" OnClientClick="playSound();displayLoadingModal();"/>
         </div>
-    </div>
+    
 </div>
 </body>
 </html>

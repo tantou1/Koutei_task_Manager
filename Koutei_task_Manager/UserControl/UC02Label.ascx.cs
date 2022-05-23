@@ -150,6 +150,11 @@ namespace Koutei_task_Manager.UserControl
             //}
             
             #endregion
+            if(!Image.Visible)
+            {
+                div_img.Style["display"] = "none";
+
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
