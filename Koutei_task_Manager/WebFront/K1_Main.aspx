@@ -41,14 +41,14 @@
                 <div style=" z-index: 91;padding:4px 16px 0px 16px;height:40px; margin-bottom:13px;" >                 <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown" >                    <ul class="navbar-nav me-auto dropdown-menu-start" >                                            <li class="nav-item dropdown" style=" height: 45px;">                        <a class="nav-link dropdown-toggle dropdown-fon" href="#" id="navbarDropdownMenuLink" runat="server" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#FFFFFF;height:45px;">                            aye                        </a>                        <div class="dropdown-menu dropdown-menu-right text-center" aria-labelledby="navbarDropdownMenuLink">                          <asp:LinkButton ID="LBT_logout" runat="server" class="dropdown-item dropdown-fon" OnClick="LBT_logout_Click">ログアウト</asp:LinkButton>                        </div>                      </li>                    </ul>                  </div>                    </div>
             </nav>
              
-         <asp:UpdatePanel runat="server" ID="updLabelSave" UpdateMode="Conditional">
+        <%-- <asp:UpdatePanel runat="server" ID="updLabelSave" UpdateMode="Conditional">
              <ContentTemplate>
                 <div class="success JCSuccess" id="divLabelSave" runat="server" style="position:fixed;display:none;height:30pt;width:100vw; left:0;background-color:#92d050;align-content:center;align-items:center; border-radius:7px;padding-left:10px;margin:2px;" >
                     <asp:Label ID="LB_Save" Text="" runat="server" ForeColor="White" Font-Size="13px"></asp:Label>
                     <asp:Button id="BT_LBSaveCross" Text="✕" runat="server" style="background-color:white;border-style:none;right:10px;position:absolute;" OnClick="BT_LBSaveCross_Click"  />
                 </div>
             </ContentTemplate>
-        </asp:UpdatePanel>
+        </asp:UpdatePanel>--%>
 
         <div class="container-fluid" >
             <div style="margin-left:12px; margin-top: 55px;">
