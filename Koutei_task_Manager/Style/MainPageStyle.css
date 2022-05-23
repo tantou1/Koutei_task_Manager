@@ -1,0 +1,55 @@
+﻿.M01PendingDiv {
+    width: 284px;
+    padding-left: 10px;
+}
+
+@media (max-width: 480px) {
+    .M01PendingDiv {
+        width: calc(100vw - 91px);
+    }
+}
+
+.M01FusenMainDiv {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: calc(100vw - 284px);
+    padding-right: 10px;
+}
+
+@media (max-width: 480px) {
+    .M01FusenMainDiv {
+        width: 86px;
+        padding-left: 2px;
+        padding-right: 3px;
+    }
+}
+
+.M01FusenMainDiv, .M01PendingDiv {
+    height: calc(100vh - 279px);
+    max-height: calc(100vh - 279px);
+    box-sizing: border-box;
+    white-space: nowrap;
+    display: inline-block;
+    float: left;
+}
+
+@media (min-width: 618px) {
+    .M01FusenMainDiv, .M01PendingDiv {
+        height: calc(100vh - 252px);
+        max-height: calc(100vh - 252px);
+    }
+}
+
+@media (min-width: 992px) {
+    .M02FusenMainDiv, .M02PendingDiv {
+        height: calc(100vh - 200px);
+        max-height: calc(100vh - 200px);
+    }
+}
+
+@media (min-width: 1260px) {
+    .M02FusenMainDiv, .M02PendingDiv {
+        height: calc(100vh - 173px);
+        max-height: calc(100vh - 173px);
+    }
+}

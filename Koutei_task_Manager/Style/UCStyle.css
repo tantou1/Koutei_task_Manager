@@ -1,0 +1,193 @@
+﻿
+.UC01SaishinjyouhouBtn {
+    display: block !important;
+    height: 25px;
+    width:105px;
+    border: none;
+    margin-top: 5px;
+    color: white !important;
+    background-color: #14B0F2 !important;
+    font-family: 'Inter-Regular';
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    border-radius: 6px !important;
+}
+
+.UC01SaishinjyouhouBtn:hover {
+        background-color: rgb(220,220,220) !important;
+        color: white !important;
+        width: 150px;
+    }
+
+@media (max-width: 480px) {
+    .UC01SaishinjyouhouBtn {
+        width: calc(100vw - 130px) !important;
+    }
+}
+
+@media (min-width: 481px) {
+    .UC01SaishinjyouhouBtn {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .UC01MobileSaishinjyouhouBtn {
+        margin-left: 4px;
+    }
+}
+.UC01FusentSuikaBtn {
+    display: block !important;
+    height: 30px;
+    border: none;
+    margin-top: 5px;
+    /*color: rgb(41, 171, 226) !important;*/
+    color: white !important;
+    /*background-color: white !important;*/
+    background-color: #14B0F2 !important;
+    font-family: 'Inter-Regular';
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+}
+
+.UC01FusentSuikaBtn:hover {
+    background-color: rgb(220,220,220) !important;
+    color: white !important;
+    width: 250px;
+}
+
+@media (max-width: 480px) {
+    .UC01FusentSuikaBtn {
+        width: calc(100vw - 130px) !important;
+    }
+}
+
+@media (min-width: 481px) {
+    .UC01FusentSuikaBtn {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .UC01MobileFusentSuikaBtn {
+        margin-left: 4px;
+    }
+}
+.UC01BoardDiv {
+    height: 76vh;
+    overflow-y: hidden;
+    /*background-color: rgb(249, 247, 245);*/
+    background-color: #EAE7DD;
+    border-radius: 15px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+@media (max-width: 480px) {
+    .UC01BoardDiv {
+        width: calc(100vw - 102px) !important;
+    }
+}
+
+@media (min-width: 481px) {
+    .UC01BoardDiv {
+        width: 237px;
+        height: 79vh;
+    }
+}
+
+.UC01FusenTopDiv {
+    margin: 5px 10px;
+}
+
+.UC01InnerTopDiv {
+    height: 27px;
+}
+
+.UC01TaskCount {
+    font-size: 12px;
+    font-family: 'Inter-Regular';
+    margin-top: 1px;
+}
+.UC02FusenDiv {
+    position: relative;
+    display: block;
+    border: 3px solid white;
+    /*background-color: rgb(255, 255, 255);*/
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 4px dimgrey;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+    .UC02FusenDiv label {
+        cursor: pointer;
+    }
+
+/*@media (max-width: 480px) {
+    .UC02FusenDiv {
+        height: 125px;
+        margin: 2px 14px 5px 14px;
+        width: calc(100vw - 130px);
+    }
+}*/
+
+@media (min-width: 481px) {
+    .UC02FusenDiv {
+        height: 81px; /*86px to 110px changed yamin*/
+        margin: 2px 10px 5px;
+        width: 213px;
+    }
+}
+.UC02AnkenIdLbl {
+    font-size: 10px !important;
+    font-family: 'Inter-Regular';
+    width: 65px;
+}
+
+.UC01FusenInfoDiv {
+    overflow-y: auto;
+    height: calc(110% - 103px);
+}
+
+.PendingBoardDiv {
+    z-index: 13;
+}
+
+.UC02AnkenIdLbl {
+    font-size: 12px !important;
+    color: #AAAAAA;
+    font-family: 'Inter-Regular';
+    font-style: normal;    line-height: 15px;
+}
+
+.UC02Lbl {
+    font-size: 14px !important;
+    font-family: 'Inter-Regular';
+    font-family: Inter;    font-style: normal;    /*line-height: 16.94px;*/
+    color: #000000;
+}
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../Font/Inter-Regular.ttf') format('truetype');
+}
+.UC02Label {
+    float: left;
+    max-width: 197px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.headerFont {
+    font-family: 'Inter-Regular';
+    font-size: 16px;
+    font-weight: 400;
+    float: left;
+    max-width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

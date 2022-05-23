@@ -1,0 +1,40 @@
+﻿@font-face {
+    font-family: "Roboto";
+    src: url('Roboto.ttf');
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url('Raleway.ttf');
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url('OpenSans.ttf');
+}
+
+@font-face {
+    font-family: "Amatic";
+    src: url('Amatic.ttf');
+}
+
+body {
+    font-family: Arial;
+    font-size: 25px;
+}
+
+.span1 {
+    font-family: "Roboto";
+}
+
+.span2 {
+    font-family: "Raleway";
+}
+
+.span3 {
+    font-family: "OpenSans";
+}
+
+.span4 {
+    font-family: "Amatic";
+}
