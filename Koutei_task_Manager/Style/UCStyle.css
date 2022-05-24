@@ -110,42 +110,6 @@
     font-family: 'Inter-Regular';
     margin-top: 1px;
 }
-.UC02FusenDiv {
-    position: relative;
-    display: block;
-    border: 3px solid white;
-    /*background-color: rgb(255, 255, 255);*/
-    background-color: #FFFFFF;
-    box-shadow: 2px 2px 4px dimgrey;
-    box-sizing: border-box;
-    cursor: pointer;
-    border-radius:8px;
-}
-
-    .UC02FusenDiv label {
-        cursor: pointer;
-    }
-
-/*@media (max-width: 480px) {
-    .UC02FusenDiv {
-        height: 125px;
-        margin: 2px 14px 5px 14px;
-        width: calc(100vw - 130px);
-    }
-}*/
-
-@media (min-width: 481px) {
-    .UC02FusenDiv {
-        height: 81px; /*86px to 110px changed yamin*/
-        margin: 2px 10px 5px;
-        width: 213px;
-    }
-}
-.UC02AnkenIdLbl {
-    font-size: 10px !important;
-    font-family: 'Inter-Regular';
-    width: 65px;
-}
 
 .UC01FusenInfoDiv {
     overflow-y: auto;
@@ -156,21 +120,6 @@
     z-index: 13;
 }
 
-.UC02AnkenIdLbl {
-    font-size: 12px !important;
-    color: #AAAAAA;
-    font-family: 'Inter-Regular';
-    font-family: Inter;
-    font-style: normal;
-    /*line-height: 15px;*/
-}
-
-.UC02Lbl {
-    font-size: 14px !important;
-    font-family: 'Inter-Regular';
-    font-family: Inter;    font-style: normal;    /*line-height: 16.94px;*/
-    color: #000000;
-}
 @font-face {
     font-family: 'Inter-Regular';
     src: url('../Font/Inter-Regular.ttf') format('truetype');
@@ -194,4 +143,112 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+.task {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    width: 213px;
+    height: 81px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 2px 2px 4px dimgrey;
+}
+
+.scode {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+    font-family: inter;
+    font-size: 12px;
+    color: #AAA;
+}
+
+.date {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    font-family: inter;
+    font-size: 14px;
+    color: #000;
+}
+
+.kenmei {
+    position: absolute;
+    top: 23px;
+    left: 8px;
+    font-family: inter;
+    font-size: 14px;
+    color: #000;
+    max-width: 197px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sTokuisaki {
+    position: absolute;
+    top: 44px;
+    left: 8px;
+    font-family: inter;
+    font-size: 14px;
+    color: #000;
+    max-width: 197px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.tantou {
+    float: right;
+    position: absolute;
+    top: 63px;
+    right: 28px;
+    font-family: inter;
+    font-size: 12px;
+    color: #AAA;
+}
+
+.circle {
+    position: absolute;
+    top: 64px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #AAA;
+    background-color: #fff;
+}
+
+.tantouImg {
+    float: right;
+    position: absolute;
+    top: 149px;
+    right: 28px;
+    font-family: inter;
+    font-size: 12px;
+    color: #AAA;
+}
+
+.circleImg {
+    position: absolute;
+    top: 150px;
+    right: 6px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #AAA;
+    background-color: #fff;
+}
+
+.image {
+    position: relative;
+    top: 66px;
+    display: flex;
+    justify-content: center;
 }
