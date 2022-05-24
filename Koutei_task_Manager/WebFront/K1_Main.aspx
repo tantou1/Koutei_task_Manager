@@ -19,7 +19,7 @@
 }
 </script>
     <title></title>
-    <style>        @font-face {            font-family: 'Inter-Regular';            src: url('../Font/Inter-Regular.ttf') format('truetype');        }         .bigcheck input {                width: 21px;                height: 21px;                vertical-align: middle;                cursor: pointer;                margin-right: 5px;                        }         .navbar-nav li:hover>.dropdown-menu {              display: block;            }         .dropdown-menu-right {             right: 0;             left: auto;         }         .nav-item a:hover        {            color: white;            cursor: pointer;            background-color:#14B0F2;                              }         .dropdown-font{             font:"Inter-Regular";             font-size:20px;         }         .nav-font{             font-family: 'Inter-Regular';             font-size:24px;             font-weight:900;         }                  .btn-font{             font-family: 'Inter-Regular';             font-size:12px;             font-weight:400;         }    </style>
+    <style>                 .bigcheck input {                width: 21px;                height: 21px;                vertical-align: middle;                cursor: pointer;                margin-right: 5px;                        }         .navbar-nav li:hover>.dropdown-menu {              display: block;            }         .dropdown-menu-right {             right: 0;             left: auto;         }         .nav-item a:hover        {            color: white;            cursor: pointer;            background-color:#14B0F2;                              }         .dropdown-font{             font:"Inter-Regular";             font-size:20px;         }         .nav-font{             font-family: 'Inter-Regular';             font-size:24px;             font-weight:900;         }                  .btn-font{             font-family: 'Inter-Regular';             font-size:12px;             font-weight:400;         }    </style>
 </head>
   
 <body style="background-color:#FFFFFF;">
@@ -66,7 +66,7 @@
                      
                 </div>--%>
                 <div class="col col-md-auto align-content-center mt-1">
-                    <asp:CheckBox ID="chk_gaozu" runat="server" AutoPostBack="True" Text="画像を表示" CssClass="bigcheck btn-font" Onchange="displayLoadingModal();"/>
+                    <asp:CheckBox ID="chk_gaozu" runat="server" AutoPostBack="True" Text="画像を表示" CssClass="bigcheck btn-font" Onchange="displayLoadingModal();" role="checkbox"/>
                 </div> 
 
                 <div class="col col-md-auto align-content-center mt-1">

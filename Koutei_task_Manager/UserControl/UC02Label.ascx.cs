@@ -30,6 +30,8 @@ namespace Koutei_task_Manager.UserControl
             lbldkanryouyotei.Text = drFusen["dKANRYOUYOTEI"].ToString();　　//指示書完了予定日
             lbleigyou.Text = drFusen["sTANTOUSHA"].ToString(); //営業担当者
             lblmail.Text = drFusen["SMAIL"].ToString(); //営業担当メール
+            lblsSHIJISYO.ToolTip = lblsSHIJISYO.Text;
+            lblsTokuisaki.ToolTip = lblsTokuisaki.Text;
 
             #region 画像表示     
             if (fgazou)

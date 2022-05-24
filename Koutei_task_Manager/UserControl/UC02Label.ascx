@@ -16,7 +16,7 @@
     <div>
         <div class="row " style="position: relative; top: 0; left:0px;">
             <div class="col-auto me-auto">
-                <asp:Label ID="lblSHIJISYO_Hyouji" runat="server" CssClass="UC02AnkenIdLbl" />
+                <asp:Label ID="lblSHIJISYO_Hyouji" runat="server" CssClass="UC02AnkenIdLbl " />
             </div>
             <div class="col-auto">
                 <asp:Label ID="lbldkanryouyotei" runat="server" CssClass="UC02Lbl" />
@@ -37,7 +37,7 @@
     <div id="div_img" class="text-center" runat="server">
             <asp:Image ID="Image" runat="server" Height="79" class="rounded" CssClass="mb-1" />    
     </div>       
-        <div style="position: relative; top:-10px; left:0px;">
+        <div style="position: relative; top:-10px; left:0px;" >
              <asp:Label ID="lbleigyou" runat="server" CssClass="UC02AnkenIdLbl" />
             <asp:Button ID="bt_end" runat="server" Text="" CssClass="WhiteBackgroundButton1" OnClick="Button1_Click" OnClientClick="playSound();displayLoadingModal();"/>
         </div>
