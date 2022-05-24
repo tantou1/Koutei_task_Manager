@@ -104,7 +104,7 @@ namespace Koutei_task_Manager.UserControl
 
                             Image.ImageUrl = imgurl;
 
-                            divFusenJouhou.Attributes.Add("style", "height:167px");
+                            divFusenJouhou.Attributes.Add("style", "height:167px");                            lbleigyou.CssClass = "tantouImg";                            bt_end.CssClass = "circleImg";
                         }
                     }
                     else
