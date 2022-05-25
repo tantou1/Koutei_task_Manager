@@ -19,22 +19,7 @@ namespace Koutei_task_Manager
                 {
                     DBUtilitycs.get_connetion_ifo();
                 }
-                K_ClientConnection_Class get_ver = new K_ClientConnection_Class();
-                string ver= get_ver.get_sCUSTOMER_USER_VERSION();
-                if (ver != "")
-                {
-                    int index1 = ver.IndexOf('.', 2);
-                    ver = ver.Substring(0, index1);
-                }
-               
-                if (ver == "2.0" || ver == "2.1" || ver == "2.2" || ver == "2.3")
-                {
-                    Session.Add("f_old_ver", "true");
-                }
-                else
-                {
-                    Session.Add("f_old_ver", "false");
-                }
+                
                 // ログインメインページへ移動する
                 Response.Redirect("WebFront/K3_Login.aspx");
             }
