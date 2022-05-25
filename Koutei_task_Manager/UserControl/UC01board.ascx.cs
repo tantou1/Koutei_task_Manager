@@ -31,13 +31,12 @@ namespace Koutei_task_Manager.UserControl
             if (taskcount == "")
             {
                bt_end.Visible = false;
-                lblPendingHeader.CssClass = "me-5 headerFont";
             }
             else
             {
                 bt_end.Visible = true;
             }
-        }
+        }   
 
         #endregion
 

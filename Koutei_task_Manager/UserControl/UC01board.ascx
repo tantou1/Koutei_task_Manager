@@ -32,19 +32,15 @@
     }    
 </script>
 </head>
-<body>
+<body style="overflow-x:hidden;">
 <div id="divFusenList" class="UC01BoardDiv CustomScroll" runat="server">
     <div id="title_bar" runat="server"> <br /></div>
     <div id="divPendingHeader" class="UC01FusenTopDiv DisplayNone" runat="server">
-        <div class="UC01InnerTopDiv d-flex justify-content-between" id="div_innertop" runat="server">
-           
-            <asp:Label ID="Label2" runat="server" class="font-weight-bold" text=""></asp:Label>
-            <asp:Label ID="Label1" runat="server" class="font-weight-bold" text=""></asp:Label>
-
+        <div class="UC01InnerTopDiv d-flex justify-content-center " id="div_innertop" runat="server" >
             <asp:Label ID="lblPendingHeader" runat="server" class="headerFont" Text="保留中のボード"></asp:Label>
-            <asp:Label ID="lblcount" runat="server" class="UC01TaskCount mt-1" Text=""></asp:Label>
+            <asp:Label ID="lblcount" runat="server" class="UC01TaskCount" Text=""></asp:Label>
             <asp:Label ID="lblPendingHeader_ID" runat="server" class="font-weight-bold" Text="0000" Visible="False"></asp:Label>
-            <asp:Button ID="bt_end" runat="server" Text="〇" CssClass="WhiteBackgroundButton1 me-2 mt-2" OnClientClick="playSound();displayLoadingModal();" OnClick="bt_end_Click" />
+            <asp:Button ID="bt_end" runat="server" Text="〇" CssClass="WhiteBackgroundButton1 " OnClientClick="playSound();displayLoadingModal();" OnClick="bt_end_Click" />
            
         </div>
         
