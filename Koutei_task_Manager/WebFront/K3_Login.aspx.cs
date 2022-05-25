@@ -32,6 +32,11 @@ namespace Koutei.WebFront
                         }
                         CHK_savepwd.Checked = true;
                     }
+                    K_ClientConnection_Class get_ver = new K_ClientConnection_Class();                    string ver = get_ver.get_sCUSTOMER_USER_VERSION();                    if (ver != "")                    {                        int index1 = ver.IndexOf('.', 2);                    }                    if (ver == "2.0" || ver == "2.1" || ver == "2.2" || ver == "2.3")                    {
+                        //Session.Add("f_old_ver", "true");
+                        SessionUtility.SetSession("f_old_ver", "true");                    }                    else                    {
+                        //Session.Add("f_old_ver", "false");
+                        SessionUtility.SetSession("f_old_ver", "false");                    }
                 }
                 catch { Response.Write("<script language='javascript'>window.alert('データベースに接続できません。管理者にお問合せ下さい。');</script>"); }
             }
