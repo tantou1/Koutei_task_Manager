@@ -306,6 +306,9 @@ input[type="radio"] + label {
     border-radius: 50%;
     border: 1px solid;
     border-color: #AAAAAA;
+    position:relative;
+    left: 88px;
+    margin-top: 13px;
 }
 
     .WhiteBackgroundButton1:hover {

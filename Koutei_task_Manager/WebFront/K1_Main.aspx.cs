@@ -21,15 +21,23 @@ namespace Koutei_task_Manager.WebFront
         public static string to, tomail;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //divLabelSave.Style["display"] = "none";
-            //updLabelSave.Update();
-            if (!this.IsPostBack)
+            try
             {
-                //messge_set();
-                navbarDropdownMenuLink.InnerText = Session["sTantou"].ToString();
+                //divLabelSave.Style["display"] = "none";
+                //updLabelSave.Update();
+                if (!this.IsPostBack)
+                {
+                    //messge_set();
+                    navbarDropdownMenuLink.InnerText = Session["sTantou"].ToString();
+                }
+                get_data_DB();
+                BindBoard();
             }
-            get_data_DB();
-            BindBoard();
+            catch
+            {
+                Response.Redirect("Default.aspx");
+            }
+            
         }
         protected void Page_LoadComplete(object sender, EventArgs e)
         {

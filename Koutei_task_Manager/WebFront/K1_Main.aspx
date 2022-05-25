@@ -19,7 +19,15 @@
 }
 </script>
     <title></title>
-    <style>                 .bigcheck input {                width: 21px;                height: 21px;                vertical-align: middle;                cursor: pointer;                margin-right: 5px;                        }         .navbar-nav li:hover>.dropdown-menu {              display: block;            }         .dropdown-menu-right {             right: 0;             left: auto;         }         .nav-item a:hover        {            color: white;            cursor: pointer;            background-color:#14B0F2;                              }         .dropdown-font{             font:"Inter-Regular";             font-size:20px;         }         .nav-font{             font-family: 'Inter-Regular';             font-size:24px;             font-weight:900;         }                  .btn-font{             font-family: 'Inter-Regular';             font-size:12px;             font-weight:400;         }    </style>
+    <style>                 .bigcheck input {                width: 21px;                height: 21px;                vertical-align: middle;                cursor: pointer;                margin-right: 5px;  	            /*-webkit-appearance:none;
+	            outline: none;
+	            content: none;                border: 1px solid #AAAAAA;*/        }         .bigcheck:hover input {                outline: 1px solid blue !important;        }                         /*input[type=checkbox]:hover {
+	            
+                border: 1px solid red !important;
+            }*/
+                 .navbar-nav li:hover>.dropdown-menu {              display: block;            }         .dropdown-menu-right {             right: 0;             left: auto;         }         .nav-item a:hover        {            color: white;            cursor: pointer;            background-color:#14B0F2;                              }         .dropdown-font{             font:"Inter-Regular";             font-size:20px;         }         .nav-font{             font-family: 'Inter-Regular';             font-size:24px;             font-weight:900;         }                  .btn-font{             font-family: 'Inter-Regular';             font-size:12px;             font-weight:400;         }         .checkbox:checked:before{
+            background-color:green;
+            }    </style>
 </head>
   
 <body style="background-color:#FFFFFF;">
@@ -34,7 +42,7 @@
         </asp:ScriptManager>
 
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7CD0FF; height: 45px;">
-                <div class="container d-flex justify-content-center""  >
+                <div class="container-fluid" style="margin: 0;position: relative;left: 45%;">
                     <a class="navbar-brand nav-font" href="#" > 工程ボート</a>                    
                 </div>
                 
@@ -66,11 +74,11 @@
                      
                 </div>--%>
                 <div class="col col-md-auto align-content-center mt-1">
-                    <asp:CheckBox ID="chk_gaozu" runat="server" AutoPostBack="True" Text="画像を表示" CssClass="bigcheck btn-font" Onchange="displayLoadingModal();" role="checkbox"/>
+                    <asp:CheckBox ID="chk_gaozu" runat="server" AutoPostBack="True" Text="画像を表示" CssClass="bigcheck btn-font checkbox" Onchange="displayLoadingModal();" role="checkbox"/>
                 </div> 
 
                 <div class="col col-md-auto align-content-center mt-1">
-                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ" CssClass="bigcheck ms-3 btn-font" OnCheckedChanged="chk_santo_CheckedChanged" Onchange="displayLoadingModal();"/>
+                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ" CssClass="bigcheck ms-3 btn-font checkbox" OnCheckedChanged="chk_santo_CheckedChanged" Onchange="displayLoadingModal();"/>
                 </div> 
 
                  <asp:UpdatePanel ID="UpdTaskTsuika" runat="server" UpdateMode="Conditional" >

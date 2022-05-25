@@ -76,7 +76,7 @@
 }
 .UC01BoardDiv {
     height: 76vh;
-    overflow-y: hidden;
+    overflow-x: hidden;
     /*background-color: rgb(249, 247, 245);*/
     background-color: #EAE7DD;
     border-radius: 15px;
@@ -86,13 +86,13 @@
 
 @media (max-width: 480px) {
     .UC01BoardDiv {
-        width: calc(100vw - 102px) !important;
+         width: 233px;
     }
 }
 
 @media (min-width: 481px) {
     .UC01BoardDiv {
-        width: 237px;
+        width: 233px;
         height: 79vh;
     }
 }
@@ -108,11 +108,15 @@
 .UC01TaskCount {
     font-size: 12px;
     font-family: 'Inter-Regular';
-    margin-top: 1px;
+    position: relative;
+    left: 75px;
+    margin-top: 8px;
+    color: #14B0F2;
 }
 
 .UC01FusenInfoDiv {
     overflow-y: auto;
+    overflow-x:hidden;
     height: calc(110% - 103px);
 }
 
@@ -135,11 +139,13 @@
 }
 
 .headerFont {
+    position: absolute;
     font-family: 'Inter-Regular';
     font-size: 16px;
     font-weight: 400;
-    float: left;
-    max-width: 150px;
+    text-align: center;
+    float:left;
+    max-width: 130px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
