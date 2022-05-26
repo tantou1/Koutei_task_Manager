@@ -37,86 +37,123 @@ namespace Koutei_task_Manager.WebFront
             {
                 Response.Redirect("K3_login.aspx");
             }
-            
-        }
+
+}
         protected void Page_LoadComplete(object sender, EventArgs e)
         {
 
         }
         private void BindBoard()
         {
+            try
+            {
+                PinChange();
 
-            PinChange();
+                //K_ClientConnection_Class test = new K_ClientConnection_Class();
+                //DataTable dt = test.GetKoutei();
 
-            //K_ClientConnection_Class test = new K_ClientConnection_Class();
-            //DataTable dt = test.GetKoutei();
+                //K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();
+                //DataTable dtLabel = label.Get_Label(chk_santo.Checked);
 
-            //K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();
-            //DataTable dtLabel = label.Get_Label(chk_santo.Checked);
+                //UC03Main ucmain = (UC03Main)LoadControl("~/UserControl/UC03Main.ascx");
+                //ucmain.ID = "UCMain";
+                //ucmain.TaskTsuika += this.HandleTaskTsuika;
+                //pnlTask.Controls.Add(ucmain);
+                //UpdTaskTsuika.Update();
 
-            //UC03Main ucmain = (UC03Main)LoadControl("~/UserControl/UC03Main.ascx");
-            //ucmain.ID = "UCMain";
-            //ucmain.TaskTsuika += this.HandleTaskTsuika;
-            //pnlTask.Controls.Add(ucmain);
-            //UpdTaskTsuika.Update();
+                DataTable dt = Session["dt"] as DataTable;
+                DataTable dtLabel = Session["dtLabel"] as DataTable;
+                int color_i = 0;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow[] drresult = dtLabel.Select("cBUNRUI = " + dt.Rows[i]["cBUNRUI"].ToString());
+                    DataTable dt_label_koutei = dtLabel.Clone();
+                    if (drresult.Length > 0)
+                    {
+                        dt_label_koutei = drresult.CopyToDataTable();
+                    }
 
-            DataTable dt = Session["dt"] as DataTable;            DataTable dtLabel = Session["dtLabel"] as DataTable;            int color_i = 0;            for (int i = 0; i < dt.Rows.Count; i++)            {                DataRow[] drresult = dtLabel.Select("cBUNRUI = " + dt.Rows[i]["cBUNRUI"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
+                    //工程ボードを設定する
+                    UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");
+                    ucBoard.ID = "ucPending" + dt.Rows[i]["cBUNRUI"].ToString();
+                    //Session["BoardName"] = dt.Rows[i]["sBUNRUI"].ToString();
+                    //Session["BoardID"] = dt.Rows[i]["cBUNRUI"].ToString();
+                    string taskcount = "";
+                    if (dt_label_koutei.Rows.Count > 0)
+                    {
+                        taskcount = dt_label_koutei.Rows.Count.ToString();
+                        //Session["TaskCount"] = dt_label_koutei.Rows.Count.ToString();
+                    }
+                    else
+                    {
+                        taskcount = "";
+                        //Session["TaskCount"] = "";
+                    }
+                    string color = "";
+                    if (color_i == 0)
+                    {
+                        color = "#7CD0FF";
+                        color_i++;
+                    }
+                    else if (color_i == 1)
+                    {
+                        color = "#F65161";
+                        color_i++;
+                    }
+                    else if (color_i == 2)
+                    {
+                        color = "#FDD853";
+                        color_i++;
+                    }
+                    else if (color_i == 3)
+                    {
+                        color = "#FC78B9";
+                        color_i++;
+                    }
+                    else if (color_i == 4)
+                    {
+                        color = "#36C398";
+                        color_i++;
+                    }
+                    else if (color_i == 5)
+                    {
+                        color = "#AEDA49";
+                        color_i++;
+                    }
+                    else if (color_i == 6)
+                    {
+                        color = "#7D5CC1";
+                        color_i++;
+                    }
+                    else if (color_i == 7)
+                    {
+                        color = "#FF954A";
+                        color_i = 0;
+                    }
 
-                //工程ボードを設定する
-                UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");                ucBoard.ID = "ucPending" + dt.Rows[i]["cBUNRUI"].ToString();                //Session["BoardName"] = dt.Rows[i]["sBUNRUI"].ToString();                //Session["BoardID"] = dt.Rows[i]["cBUNRUI"].ToString();
-                string taskcount = "";
-                if (dt_label_koutei.Rows.Count > 0)
-                {
-                    taskcount = dt_label_koutei.Rows.Count.ToString();
-                    //Session["TaskCount"] = dt_label_koutei.Rows.Count.ToString();
-                }                else
-                {
-                    taskcount = "";
-                    //Session["TaskCount"] = "";
-                }                string color = "";                if (color_i == 0)
-                {
-                    color = "#7CD0FF";
-                    color_i++;
-                }                else if (color_i == 1)
-                {
-                    color = "#F65161";
-                    color_i++;
-                }                else if (color_i == 2)
-                {
-                    color = "#FDD853";
-                    color_i++;
-                }                else if (color_i == 3)
-                {
-                    color = "#FC78B9";
-                    color_i++;
+                    ucBoard.SetPendingFusenBoardData(dt.Rows[i]["sBUNRUI"].ToString(), dt.Rows[i]["cBUNRUI"].ToString(), taskcount, color);
+                    ucBoard.EndKoutei_All += this.HandleEndKoutei_All;
+                    pnlPending.Controls.Add(ucBoard);
+
+                    //工程ボードの中に付箋を設定する
+                    Panel pnlFusen = (Panel)ucBoard.FindControl("pnlFusen");
+                    if (dt_label_koutei.Rows.Count > 0)
+                    {
+                        for (int j = 0; j < dt_label_koutei.Rows.Count; j++)
+                        {
+                            UC02Label ucLabelJouhou = (UC02Label)LoadControl("~/UserControl/UC02Label.ascx");
+                            ucLabelJouhou.ID = "uc" + (j + 1);
+                            ucLabelJouhou.SetFusenJouhou(dt_label_koutei.Rows[j], chk_gaozu.Checked);
+                            ucLabelJouhou.EndKoutei += this.HandleEndKoutei;
+                            pnlFusen.Controls.Add(ucLabelJouhou);
+                        }
+                    }
                 }
-                else if (color_i == 4)
-                {
-                    color = "#36C398";
-                    color_i++;
-                }
-                else if (color_i == 5)
-                {
-                    color = "#AEDA49";
-                    color_i++;
-                }
-                else if (color_i == 6)
-                {
-                    color = "#7D5CC1";
-                    color_i++;
-                }
-                else if (color_i == 7)
-                {
-                    color = "#FF954A";
-                    color_i = 0;
-                }                ucBoard.SetPendingFusenBoardData(dt.Rows[i]["sBUNRUI"].ToString(), dt.Rows[i]["cBUNRUI"].ToString(), taskcount, color);
-                ucBoard.EndKoutei_All += this.HandleEndKoutei_All;
-                pnlPending.Controls.Add(ucBoard);
-
-                //工程ボードの中に付箋を設定する
-                Panel pnlFusen = (Panel)ucBoard.FindControl("pnlFusen");                if (dt_label_koutei.Rows.Count > 0)                {                    for (int j = 0; j < dt_label_koutei.Rows.Count; j++)                    {                        UC02Label ucLabelJouhou = (UC02Label)LoadControl("~/UserControl/UC02Label.ascx");                        ucLabelJouhou.ID = "uc" + (j + 1);                        ucLabelJouhou.SetFusenJouhou(dt_label_koutei.Rows[j], chk_gaozu.Checked);
-                        ucLabelJouhou.EndKoutei += this.HandleEndKoutei;
-                        pnlFusen.Controls.Add(ucLabelJouhou);                    }                }            }
+            }
+            catch(Exception ex)
+            {
+                Response.Write("<script language='javascript'>window.alert('"+ex.ToString()+"');</script>");
+            }
             updFusenMain.Update();
         }
 
