@@ -18,6 +18,8 @@
             font-family: 'Inter-Regular';
             font-size: 11px;
             color: red;
+        }        .col-md-5{
+            width:547px;
         }    </style>    <script type='text/javascript'>
     function OnlyNumericEntry() 
     {
