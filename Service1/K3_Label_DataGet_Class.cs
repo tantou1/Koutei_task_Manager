@@ -54,7 +54,7 @@ namespace Service
             {
                 qr += " inner join(select min(rsb2.nJUMBAN) as minjun,rsb2.cSHIJISYO";
                 qr += " from r_shijisyo_bunrui rsb2";
-                qr += " where rsb2.fJYOUTAI<>3 group by rsb2.cSHIJISYO) mn";
+                qr += " where (rsb2.fJYOUTAI<>3  or rsb2.fJYOUTAI is null or rsb2.fJYOUTAI='' ) group by rsb2.cSHIJISYO) mn";
                 qr += " on rsb.nJUMBAN = mn.minjun and rsb.cSHIJISYO=mn.cSHIJISYO";
             }
 
@@ -82,7 +82,7 @@ namespace Service
             qr += " and rs.fJYOUTAI<>'4' and rs.fJYOUTAI<>'0' and rs.fJYOUTAI<>'3'";
             qr += " and rs.fHYOUJI='0' ";
             qr += " and (rsb.fJYOUTAI<>3 or rsb.fJYOUTAI is null or rsb.fJYOUTAI='' )";
-            qr += "AND rs.fKAKUTEI='1'";
+            qr += " AND rs.fKAKUTEI='1'";
             if (f_santou == true)
             {
                 qr += " group by rs.cSHIJISYO";
