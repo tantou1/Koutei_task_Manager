@@ -85,6 +85,8 @@ namespace Koutei.WebFront
                     else
                     {
                         LB_Pass_Error.Text = "パスワードが正しくありません。";
+                        TB_password.Attributes["value"] = string.Empty;
+                        TB_password.Focus();
                     }
 
                 }
@@ -92,8 +94,9 @@ namespace Koutei.WebFront
             
         }
 
-        protected void TB_ctantousha_TextChanged(object sender, EventArgs e)        {            LB_Code_Error.Text = "";            LB_Pass_Error.Text = "";            if (!String.IsNullOrEmpty(TB_ctantousha.Text))            {                string ctantou = TB_ctantousha.Text.ToString().PadLeft(4, '0');                TB_ctantousha.Text = ctantou;                string stantou = K3Login_Class.Get_tantou(TB_ctantousha.Text);                if (!String.IsNullOrEmpty(stantou))                {                    TB_stantousha.Text = stantou;                    TB_password.Focus();                }                else                {                    LB_Code_Error.Text = "ログインIDが正しくありません。";                    //TB_ctantousha.Text = string.Empty;                    TB_stantousha.Text = string.Empty;                    TB_ctantousha.Focus();                }            }
-
+        protected void TB_ctantousha_TextChanged(object sender, EventArgs e)        {            LB_Code_Error.Text = "";            LB_Pass_Error.Text = "";            if (!String.IsNullOrEmpty(TB_ctantousha.Text))            {                string ctantou = TB_ctantousha.Text.ToString().PadLeft(4, '0');                TB_ctantousha.Text = ctantou;                string stantou = K3Login_Class.Get_tantou(TB_ctantousha.Text);                if (!String.IsNullOrEmpty(stantou))                {                    TB_stantousha.Text = stantou;                    TB_password.Focus();                }                else                {                    LB_Code_Error.Text = "ログインIDが正しくありません。";                    TB_ctantousha.Text = string.Empty;                    TB_stantousha.Text = string.Empty;                    TB_ctantousha.Focus();                }            }
+            else            {                TB_stantousha.Text = "";            }
+            TB_password.Attributes["value"] = string.Empty;
         }
     }
 }
