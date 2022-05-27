@@ -1,8 +1,7 @@
 ﻿
 .UC01SaishinjyouhouBtn {
-    display: block !important;
     height: 25px;
-    width:105px;
+    width: 150px;
     border: none;
     margin-top: 5px;
     color: white !important;
@@ -13,13 +12,13 @@
     border-radius: 6px !important;
 }
 
-.UC01SaishinjyouhouBtn:hover {
+    .UC01SaishinjyouhouBtn:hover {
         background-color: rgb(220,220,220) !important;
         color: white !important;
         width: 150px;
     }
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
     .UC01SaishinjyouhouBtn {
         width: calc(100vw - 130px) !important;
     }
@@ -35,7 +34,7 @@
     .UC01MobileSaishinjyouhouBtn {
         margin-left: 4px;
     }
-}
+}*/
 .UC01FusentSuikaBtn {
     display: block !important;
     height: 30px;
@@ -75,25 +74,25 @@
     }
 }
 .UC01BoardDiv {
-    height: 76vh;
-    overflow-x: hidden;
+    overflow-y: hidden;
     /*background-color: rgb(249, 247, 245);*/
     background-color: #EAE7DD;
     border-radius: 15px;
     vertical-align: middle;
     display: inline-block;
+    height: calc(100vh - 115px);
+    max-height: calc(100vh - 115px);
 }
 
 @media (max-width: 480px) {
     .UC01BoardDiv {
-         width: 233px;
+        width: 233px;
     }
 }
 
 @media (min-width: 481px) {
     .UC01BoardDiv {
         width: 233px;
-        height: 79vh;
     }
 }
 
@@ -116,8 +115,9 @@
 
 .UC01FusenInfoDiv {
     overflow-y: auto;
-    overflow-x:hidden;
-    height: calc(110% - 103px);
+    overflow-x: hidden;
+    height: calc(100vh - 175px);
+
 }
 
 .PendingBoardDiv {
@@ -228,6 +228,9 @@
     border-color: #AAA;
     background-color: #fff;
 }
+    .circle:hover {
+        border: 1px solid #14b0f2;
+    }
 
 .tantouImg {
     float: right;
@@ -251,10 +254,20 @@
     border-color: #AAA;
     background-color: #fff;
 }
-
+    .circleImg:hover {
+        border: 1px solid #14b0f2;
+    }
 .image {
-    position: relative;
-    top: 66px;
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    top: 65px;
+    left: 11px;
+    width: 191px;
+    height: 80px;
+    text-align: center;
 }
+
+    .image img {
+        max-width: 191px;
+        max-height: 80px;
+        object-fit: contain;
+    }

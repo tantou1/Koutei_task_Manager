@@ -87,8 +87,8 @@ namespace Service
             {
                 qr += " group by rs.cSHIJISYO";
             }
-            qr += " ORDER BY rs.cSHIJISYO DESC ";
-           
+            qr += " ORDER BY rs.dKANRYOUYOTEI,rs.cSHIJISYO ASC ";
+
             DataTable dt = new DataTable();
             con.Close();
             con.Open();

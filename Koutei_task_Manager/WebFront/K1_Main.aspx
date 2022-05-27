@@ -21,13 +21,11 @@
     <title></title>
     <style>                 .bigcheck input {                width: 21px;                height: 21px;                vertical-align: middle;                cursor: pointer;                margin-right: 5px;  	            /*-webkit-appearance:none;
 	            outline: none;
-	            content: none;                border: 1px solid #AAAAAA;*/        }         .bigcheck:hover input {                outline: 1px solid blue !important;        }                         /*input[type=checkbox]:hover {
+	            content: none;                border: 1px solid #AAAAAA;*/        }         /*.bigcheck:hover input {                outline: 1px solid blue !important;        }*/                         /*input[type=checkbox]:hover {
 	            
                 border: 1px solid red !important;
             }*/
-                 .navbar-nav li:hover>.dropdown-menu {              display: block;            }         .dropdown-menu-right {             right: 0;             left: auto;         }         .nav-item a:hover        {            color: white;            cursor: pointer;            background-color:#14B0F2;                              }         .dropdown-font{             font:"Inter-Regular";             font-size:20px;         }         .nav-font{             font-family: 'Inter-Regular';             font-size:24px;             font-weight:900;         }                  .btn-font{             font-family: 'Inter-Regular';             font-size:12px;             font-weight:400;         }         .checkbox:checked:before{
-            background-color:green;
-            }    </style>
+                 .navbar-nav li:hover>.dropdown-menu {              display: block;            }         .dropdown-menu-right {             right: 0;             left: auto;         }         .nav-item a:hover        {            color: white;            cursor: pointer;            background-color:#14B0F2;                              }         .dropdown-font{             font:"Inter-Regular";             font-size:20px;         }         .nav-font{             font-family: 'Inter-Regular';             font-size:24px;             font-weight:900;         }                  .btn-font{             font-family: 'Inter-Regular';             font-size:12px;             font-weight:400;         }    </style>
 </head>
   
 <body style="background-color:#FFFFFF;">
@@ -60,12 +58,10 @@
 
         <div class="container-fluid" >
             <div style="margin-left:12px; margin-top: 55px;">
-            <div class="row ">
+            <div class="row " style="margin-bottom:11px;">
 
                 <div class="col col-md-auto">
-                    <asp:Button ID="btn_SaishinJyouhou" runat="server" Text="最新情報を表示" role="button" CssClass="UC01SaishinjyouhouBtn UC01MobileSaishinjyouhouBtn btn-font"
-                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" /> <br />
-                     
+                    <asp:Button ID="btn_SaishinJyouhou" runat="server" Text="最新情報を表示" role="button" CssClass="UC01SaishinjyouhouBtn  btn-font"                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" /> <br />                     
                 </div>
 
                 <%--<div class="col col-md-auto">

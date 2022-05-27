@@ -14,17 +14,7 @@
          body,html{
              margin:0;
          }
-         @font-face {
-        font-family: 'Inter-Regular';
-        src: url('../Font/Inter-Regular.ttf') format('truetype');
-    }
-         .headerFont{
-             font-family: 'Inter-Regular';
-             font-size:16px;
-             font-weight:400;
-         }
-    
-      </style>
+</style>
      <script>
   function playSound() {
   var audio = new Audio('../Sound/ganbattane.mp3');

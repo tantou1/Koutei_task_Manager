@@ -312,7 +312,7 @@ input[type="radio"] + label {
 }
 
     .WhiteBackgroundButton1:hover {
-        color: rgba(0,113,188,1);
+        border: 1px solid #14b0f2;
     }
 
 .RedBackgroundButton {
