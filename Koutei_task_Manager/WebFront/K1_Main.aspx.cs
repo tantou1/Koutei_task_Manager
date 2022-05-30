@@ -35,7 +35,8 @@ namespace Koutei_task_Manager.WebFront
             }
             catch
             {
-                Response.Redirect("K3_login.aspx");
+                //Response.Redirect("K3_login.aspx");
+                Response.Redirect("~/Default.aspx");
             }
 
 }

@@ -8,7 +8,7 @@
   -->
   <param name="DATA_SOURCE">localhost</param>
   <param name="DATABASE">2.2.0</param>
-  <param name="PASSWORD">root</param>
+  <param name="PASSWORD">signjobz</param>
   <param name="USER_ID">root</param>
     
 </params>
