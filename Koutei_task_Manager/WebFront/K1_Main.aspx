@@ -8,8 +8,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="Scripts/jquery.js"></script>
     <asp:PlaceHolder runat="server">        <%: Styles.Render("~/style/StyleBundle2") %>        <%: Styles.Render("~/style/UCStyleBundle") %>        <%: Scripts.Render("~/scripts/ScriptBundle1") %>       </asp:PlaceHolder>  
-       
-    
   <script>
       window.onload = function() {		
 		//ここで本体を表示にさせる
@@ -19,13 +17,6 @@
 }
 </script>
     <title></title>
-    <style>                 .bigcheck input {                width: 21px;                height: 21px;                vertical-align: middle;                cursor: pointer;                margin-right: 5px;  	            /*-webkit-appearance:none;
-	            outline: none;
-	            content: none;                border: 1px solid #AAAAAA;*/        }         /*.bigcheck:hover input {                outline: 1px solid blue !important;        }*/                         /*input[type=checkbox]:hover {
-	            
-                border: 1px solid red !important;
-            }*/
-                 .navbar-nav li:hover>.dropdown-menu {              display: block;            }         .dropdown-menu-right {             right: 0;             left: auto;         }         .nav-item a:hover        {            color: white;            cursor: pointer;            background-color:#14B0F2;                              }         .dropdown-font{             font:"Inter-Regular";             font-size:20px;         }         .nav-font{             font-family: 'Inter-Regular';             font-size:24px;             font-weight:900;         }                  .btn-font{             font-family: 'Inter-Regular';             font-size:12px;             font-weight:400;         }    </style>
 </head>
   
 <body style="background-color:#FFFFFF;">
