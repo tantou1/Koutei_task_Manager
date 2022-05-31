@@ -1,4 +1,8 @@
-﻿
+﻿@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../Font/Inter-Regular.ttf') format('truetype');
+}
+
 .UC01SaishinjyouhouBtn {
     height: 25px;
     width: 150px;
@@ -6,7 +10,7 @@
     margin-top: 5px;
     color: white !important;
     background-color: #14B0F2 !important;
-    font-family: 'Inter-Regular';
+    font-family: inter;
     font-size: 12px !important;
     font-weight: 400 !important;
     border-radius: 6px !important;
@@ -44,17 +48,17 @@
     color: white !important;
     /*background-color: white !important;*/
     background-color: #14B0F2 !important;
-    font-family: 'Inter-Regular';
+    font-family: inter;
     font-size: 13px !important;
     font-weight: 600 !important;
     border-radius: 6px !important;
 }
 
-.UC01FusentSuikaBtn:hover {
-    background-color: rgb(220,220,220) !important;
-    color: white !important;
-    width: 250px;
-}
+    .UC01FusentSuikaBtn:hover {
+        background-color: rgb(220,220,220) !important;
+        color: white !important;
+        width: 250px;
+    }
 
 @media (max-width: 480px) {
     .UC01FusentSuikaBtn {
@@ -73,6 +77,7 @@
         margin-left: 4px;
     }
 }
+
 .UC01BoardDiv {
     overflow-y: hidden;
     /*background-color: rgb(249, 247, 245);*/
@@ -106,7 +111,7 @@
 
 .UC01TaskCount {
     font-size: 12px;
-    font-family: 'Inter-Regular';
+    font-family: inter;
     position: relative;
     left: 75px;
     margin-top: 8px;
@@ -117,17 +122,13 @@
     overflow-y: auto;
     overflow-x: hidden;
     height: calc(100vh - 175px);
-
 }
 
 .PendingBoardDiv {
     z-index: 13;
 }
 
-@font-face {
-    font-family: 'Inter-Regular';
-    src: url('../Font/Inter-Regular.ttf') format('truetype');
-}
+
 .UC02Label {
     float: left;
     max-width: 197px;
@@ -140,16 +141,17 @@
 
 .headerFont {
     position: absolute;
-    font-family: 'Inter-Regular';
+    font-family: inter;
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    float:left;
+    float: left;
     max-width: 130px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
+
 .task {
     margin-left: 10px;
     margin-right: 10px;
@@ -228,6 +230,7 @@
     border-color: #AAA;
     background-color: #fff;
 }
+
     .circle:hover {
         border: 1px solid #14b0f2;
     }
@@ -254,9 +257,11 @@
     border-color: #AAA;
     background-color: #fff;
 }
+
     .circleImg:hover {
         border: 1px solid #14b0f2;
     }
+
 .image {
     position: absolute;
     top: 65px;
@@ -271,3 +276,110 @@
         max-height: 80px;
         object-fit: contain;
     }
+
+.bigcheck input {
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.navbar-nav li:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+.nav-link:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #14A2F2;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(20, 176, 242, 0.4);
+}
+
+
+.dropdown-font {
+    font-family: inter;
+    font-size: 20px;
+}
+
+.nav-font {
+    font-family: inter;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.btn-font {
+    font-family: inter;
+    font-size: 12px;
+    font-weight: 400;
+}
+.error {
+    font-family: inter;
+    font-size: 11px;
+    color: red;
+}
+
+.col-md-5 {
+    width: 547px;
+}
+
+.K3Login {
+    max-width: 450px !important;
+    width: 450px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.LabelFont {
+    font-family: inter;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.LoginFont {
+    font-family: inter;
+    font-size: 16px;
+}
+
+.textFont {
+    font-family: inter;
+    font-size: 14px;
+}
+
+.loginbutton {
+    border-radius: 5px;
+    outline: 0;
+    cursor: pointer;
+    border: 1px solid #14B0F2;
+    background-color: #14B0F2;
+    color: White;
+    width: 90px;
+    height: 35px;
+}
+
+    .loginbutton:hover, .loginbutton:focus {
+        border-color: #14B0F2;
+        border-width: 2px;
+        background-color: #7CD0FF;
+        color: White;
+    }
+
+
+.bigcheckL input {
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 4px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+}
