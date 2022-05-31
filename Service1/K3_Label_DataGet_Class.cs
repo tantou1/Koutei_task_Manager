@@ -186,7 +186,7 @@ namespace Service
             String qr = "SELECT";
             qr += " count(rsb.cBUNRUI) as kouteicount ";
             qr += " from r_shijisyo_bunrui rsb";
-            qr += " where rsb.cshijisyo='" + cSHIJISYO + "' and rsb.fJYOUTAI<>3";
+            qr += " where rsb.cshijisyo='" + cSHIJISYO + "' and (rsb.fJYOUTAI<>3 or rsb.fJYOUTAI is null or rsb.fJYOUTAI='')";
 
             DataTable dt = new DataTable();
 
