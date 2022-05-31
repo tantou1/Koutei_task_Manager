@@ -30,7 +30,7 @@
             <asp:Label ID="lblPendingHeader" runat="server" class="headerFont" Text="保留中のボード"></asp:Label>
             <asp:Label ID="lblcount" runat="server" class="UC01TaskCount" Text=""></asp:Label>
             <asp:Label ID="lblPendingHeader_ID" runat="server" class="font-weight-bold" Text="0000" Visible="False"></asp:Label>
-            <asp:Button ID="bt_end" runat="server" Text="〇" CssClass="WhiteBackgroundButton1 " OnClientClick="playSound();displayLoadingModal();" OnClick="bt_end_Click" />
+            <asp:Button ID="bt_end" runat="server" Text="" CssClass="WhiteBackgroundButton1 " OnClientClick="displayLoadingModal();" OnClick="bt_end_Click" />
            
         </div>
         
