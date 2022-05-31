@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <script>
   function playSound() {
-  var audio = new Audio('../Sound/ganbattane.mp3');
-      audio.play();
+  //var audio = new Audio('../Sound/ganbattane.mp3');
+  //    audio.play();
     }    
 </script>
 
