@@ -258,29 +258,6 @@ input[type="radio"] + label {
     display: inline-block !important;
 }
 
-.BlueBackgroundButton {
-    line-height: 30px;
-    text-align: center;
-    border: none;
-    font-size: 13px;
-    border-radius: 6px;
-    color: rgb(255, 255, 255);
-    background: rgba(41, 171, 226, 1);
-}
-
-    .BlueBackgroundButton:hover {
-        background: rgba(0,113,188,1);
-    }
-
-.DisableBlueBackgroundButton {
-    line-height: 30px;
-    text-align: center;
-    border: none;
-    font-size: 13px;
-    border-radius: 6px;
-    color: rgb(192,192,192);
-    background: rgba(41, 171, 226, 1);
-}
 
 /*.WhiteBackgroundButton {
     line-height: 30px;
@@ -302,9 +279,6 @@ input[type="radio"] + label {
     margin-top: 5px;
 }
 
-    .WhiteBackgroundButton:hover {
-        color: rgba(0,113,188,1);
-    }
 
 /*.WhiteBackgroundButton1 {
     line-height: 30px;
