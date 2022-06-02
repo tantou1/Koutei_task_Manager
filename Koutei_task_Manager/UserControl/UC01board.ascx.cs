@@ -30,11 +30,11 @@ namespace Koutei_task_Manager.UserControl
 
             if (taskcount == "")
             {
-               bt_end.Visible = false;
+                lnkbtn_end.Visible = false;
             }
             else
             {
-                bt_end.Visible = true;
+                lnkbtn_end.Visible = true;
             }
         }   
 

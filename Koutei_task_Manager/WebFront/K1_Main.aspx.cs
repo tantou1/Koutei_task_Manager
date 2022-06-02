@@ -201,7 +201,9 @@ namespace Koutei_task_Manager.WebFront
 
         public void HandleEndKoutei(object sender, EventArgs e)        {
             //divLabelSave.Style["display"] = "flex";
-            //updLabelSave.Update();            Button btnDelete = (sender as Button);            UC02Label uc02label = (UC02Label)btnDelete.NamingContainer;            Label lbcSHIJISYO = uc02label.FindControl("lbcSHIJISYO") as Label;            Label lblKouteiId = uc02label.FindControl("lblKouteiId") as Label;            Label lblmail = uc02label.FindControl("lblmail") as Label;
+            //updLabelSave.Update();
+
+            LinkButton btnDelete = (sender as LinkButton);            UC02Label uc02label = (UC02Label)btnDelete.NamingContainer;            Label lbcSHIJISYO = uc02label.FindControl("lbcSHIJISYO") as Label;            Label lblKouteiId = uc02label.FindControl("lblKouteiId") as Label;            Label lblmail = uc02label.FindControl("lblmail") as Label;
             Label lblsshijisyo = uc02label.FindControl("lblsSHIJISYO") as Label;
             Label lbltokui = uc02label.FindControl("lblsTokuisaki") as Label;            
 
@@ -223,9 +225,9 @@ namespace Koutei_task_Manager.WebFront
                                       "\n\n上記案件が完了いたしました。";                    mailsend(lblmail.Text,mail_naiyou, lblsshijisyo.Text);                }                ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);            }            else            {                ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);                return;            }        }
 
         public void HandleEndKoutei_All(object sender, EventArgs e)
-        {          
+        {
 
-            Button btnDelete = (sender as Button);
+            LinkButton btnDelete = (sender as LinkButton);
             UC01board board = (UC01board)btnDelete.NamingContainer;
             Label lbcBUNRUI = board.FindControl("lblPendingHeader_ID") as Label;
 

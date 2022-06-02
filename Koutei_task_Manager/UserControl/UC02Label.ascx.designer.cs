@@ -130,12 +130,21 @@ namespace Koutei_task_Manager.UserControl {
         protected global::System.Web.UI.WebControls.Label lbleigyou;
         
         /// <summary>
-        /// bt_end コントロール。
+        /// lnkbtn_end コントロール。
         /// </summary>
         /// <remarks>
         /// 自動生成されたフィールド。
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bt_end;
+        protected global::System.Web.UI.WebControls.LinkButton lnkbtn_end;
+        
+        /// <summary>
+        /// imgZumi コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgZumi;
     }
 }
