@@ -218,7 +218,7 @@
     color: #AAA;
 }
 
-.circle {
+/*.circle {
     position: absolute;
     top: 64px;
     right: 6px;
@@ -233,7 +233,12 @@
 
     .circle:hover {
         border: 1px solid #14b0f2;
-    }
+    }*/
+.circle {
+    position: absolute;
+    top: 58px;
+    right: 6px;
+}
 
 .tantouImg {
     float: right;
@@ -245,7 +250,7 @@
     color: #AAA;
 }
 
-.circleImg {
+/*.circleImg {
     position: absolute;
     top: 150px;
     right: 6px;
@@ -260,7 +265,12 @@
 
     .circleImg:hover {
         border: 1px solid #14b0f2;
-    }
+    }*/
+.circleImg {
+    position: absolute;
+    top: 145px;
+    right: 6px;
+}
 
 .image {
     position: absolute;
@@ -382,4 +392,10 @@
     margin-right: 4px;
     margin-left: 3px;
     margin-bottom: 3px;
+}
+.TooltipLbl {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
 }

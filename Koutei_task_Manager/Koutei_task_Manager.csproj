@@ -186,7 +186,9 @@
     <Content Include="Dll\Common.pdb" />
     <Content Include="Dll\MySql.Data.dll" />
     <Content Include="Global.asax" />
+    <Content Include="Img\bluecircle.png" />
     <Content Include="Img\camera.jpg" />
+    <Content Include="Img\graycircle.png" />
     <Content Include="Img\loading.gif" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
